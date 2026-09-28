@@ -1,0 +1,1498 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Times New Roman", Times, serif;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 90px;
+    background-color: #752388;
+
+    display: flex;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    padding: 10px 5%;
+}
+
+.nav_1 {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 30px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.mn_pic {
+    margin-right: auto;
+}
+
+.mn_pic img {
+    width: 150px;
+    height: auto;
+}
+
+.nav_1 a {
+    font-size: 20px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.nav_1 a:hover {
+    color: #000;
+}
+
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+#img_container {
+    width: 100%;
+    height: 750px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #000;
+}
+
+.slide_container {
+    width: 400%;
+    height: 100%;
+
+    display: flex;
+
+    animation: scroll 30s linear infinite;
+}
+
+.slide_image {
+    width: 25%;
+    min-width: 25%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderImg {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.slide_container:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-75%);
+    }
+}
+
+
+/* =========================================================
+   ALL MAIN HEADINGS
+========================================================= */
+
+#page_1,
+#page_2,
+#chose_h,
+#Process_h,
+#hea_1 {
+    font-size: clamp(42px, 5vw, 75px);
+
+    text-align: center;
+
+    margin: 60px 0 45px;
+
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.div_x {
+    width: 100%;
+
+    min-height: 750px;
+
+    background-color: #FDF0FE;
+
+    padding: 70px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.about_cards {
+    width: 55%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+.container_3 {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.div_1 {
+    width: 300px;
+    min-height: 220px;
+
+    background-color: #fff;
+
+    padding: 20px;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.div_1:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 10px 25px rgba(43, 40, 43, 0.25);
+}
+
+.div_icons {
+    display: block;
+
+    text-align: center;
+
+    font-size: 45px;
+
+    color: #752388;
+
+    margin:  5px auto 15px;
+    margin-left: 100px;
+}
+
+.h_2 {
+    font-size: 23px;
+
+    text-align: center;
+
+    margin: 10px 0;
+}
+
+.p_1 {
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    margin: 0;
+}
+
+.about_image {
+    width: 45%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.img_1 {
+    width: 100%;
+
+    max-width: 650px;
+
+    height: auto;
+}
+
+
+/* =========================================================
+   OUR SERVICES
+========================================================= */
+
+/*
+   YE MAIN FIX HAI.
+
+   Image = left
+   Boxes = right
+
+   Desktop:
+   50% + 50%
+
+   Mobile:
+   column
+*/
+
+.sideByside {
+
+    width: 100%;
+
+    max-width: 1600px;
+
+    margin: 0 auto;
+
+    padding: 20px 5% 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* LEFT IMAGE */
+
+.service_left {
+
+    width: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.service_image {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    height: auto;
+
+    border-radius: 20px;
+
+    object-fit: cover;
+}
+
+
+/* RIGHT BOXES */
+
+.service_right {
+
+    width: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* SERVICE BOX */
+
+.solotion {
+
+    width: 100%;
+
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 15px 20px;
+
+    background-color: #fff;
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.solotion:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(43, 40, 43, 0.15);
+}
+
+
+/* SERVICE ICON */
+
+.service_icon {
+
+    width: 55px;
+    height: 55px;
+
+    min-width: 55px;
+
+    border-radius: 50%;
+
+    background-color: #E1BEE7;
+
+    color: #752388;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 25px;
+}
+
+
+/* TEXT */
+
+.service_text {
+
+    flex: 1;
+}
+
+.h_3 {
+
+    color: #752388;
+
+    font-size: 25px;
+
+    margin: 5px 0 10px;
+
+}
+
+.p_2 {
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+    color: #444;
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
+
+.page_3 {
+
+    width: 100%;
+
+    background-color: #FDF0FE;
+
+    padding: 30px 5% 80px;
+}
+
+.chose_1 {
+
+    width: 80%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 60px;
+}
+
+
+/* CARDS */
+
+.rwCon {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.divfst,
+.div_2 {
+
+    width: 350px;
+
+    min-height: 280px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.divfst:hover,
+.div_2:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 10px 25px rgba(43, 40, 43, 0.2);
+}
+
+.icons {
+
+
+    
+    display: block;
+
+    text-align: center;
+
+    font-size: 45px;
+
+    color: #800080;
+    
+    margin-left: 100px; 
+}
+
+.h_4 {
+
+    font-size: 25px;
+
+    text-align: center;
+
+    margin: 15px 0;
+}
+
+.p_3 {
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    margin: 0;
+}
+
+.scdRFdiv {
+
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process_img {
+
+    width: 85%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 80px;
+}
+
+
+/* =========================================================
+   INDUSTRIES
+========================================================= */
+
+.page_4 {
+
+    width: 100%;
+
+    background-color: #FDF0FE;
+
+    padding: 20px 5% 70px;
+}
+
+.img_div {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 70px;
+}
+
+.industry_box {
+
+    width: 280px;
+
+    text-align: center;
+}
+
+.circle_img {
+
+    width: 260px;
+
+    height: 260px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.industry_box h2 {
+
+    font-size: 25px;
+
+    margin: 20px 0;
+}
+
+.page_4 hr {
+
+    margin-top: 60px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact_section {
+
+    width: 100%;
+
+    padding: 70px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 70px;
+}
+
+.contact_us {
+
+    width: 48%;
+
+    max-width: 700px;
+
+    height: auto;
+
+    border-radius: 10px;
+}
+
+.contact_form {
+
+    width: 48%;
+
+    max-width: 600px;
+}
+
+#page_5 {
+
+    font-size: 55px;
+
+    text-align: center;
+
+    margin: 0 0 20px;
+}
+
+.page-5 {
+
+    font-size: 20px;
+
+    text-align: center;
+
+    color: #666883;
+
+    margin-bottom: 40px;
+}
+
+.From {
+
+    width: 100%;
+}
+
+.form_group {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 25px;
+}
+
+.input_1,
+.input_2 {
+
+    width: 100%;
+
+    border: 2px solid #222;
+
+    border-radius: 15px;
+
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 18px;
+
+    outline: none;
+}
+
+.input_1 {
+
+    height: 60px;
+
+    padding: 10px 55px 10px 20px;
+}
+
+.input_2 {
+
+    height: 130px;
+
+    padding: 20px 55px 20px 20px;
+
+    resize: vertical;
+}
+
+.form_icons {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 20px;
+
+    color: #752388;
+
+    font-size: 20px;
+}
+
+.sub_btn {
+
+    display: block;
+
+    width: 150px;
+
+    height: 50px;
+
+    margin: 20px auto;
+
+    background-color: #752388;
+
+    color: white;
+
+    font-size: 25px;
+
+    border-radius: 10px;
+
+    border: 2px solid black;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.sub_btn:hover {
+
+    background-color: #E1BEE7;
+
+    color: black;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer_container {
+
+    width: 100%;
+
+    min-height: 500px;
+
+    background-color: #800080;
+
+    color: white;
+
+    padding: 70px 6% 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 50px;
+
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+}
+
+.footer_column {
+
+    min-width: 0;
+}
+
+.get_head {
+
+    font-size: 65px;
+
+    margin: 0 0 20px;
+
+    color: white;
+}
+
+.footer_pera {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+.footer_container h2 {
+
+    font-size: 25px;
+
+    margin-top: 0;
+}
+
+.footer_container p {
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+.apps_icons {
+
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 20px;
+}
+
+.facebook_logo,
+.apps_logo {
+
+    color: white;
+
+    font-size: 45px;
+
+    transition: 0.3s;
+}
+
+.facebook_logo:hover,
+.apps_logo:hover {
+
+    color: black;
+
+    background-color: #E1BEE7;
+}
+
+.last_pera {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin: 0;
+
+    font-size: 15px !important;
+}
+
+.last_pera a {
+
+    color: white;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+    /* NAVBAR */
+
+    .navbar {
+
+        padding: 15px 3%;
+    }
+
+    .nav_1 {
+
+        gap: 18px;
+
+    }
+
+    .nav_1 a {
+
+        font-size: 17px;
+    }
+
+
+    /* ABOUT */
+
+    .div_x {
+
+        padding: 50px 4%;
+
+        flex-direction: column;
+    }
+
+    .about_cards {
+
+        width: 100%;
+    }
+
+    .about_image {
+
+        width: 80%;
+    }
+
+
+    /* SERVICES */
+
+    .sideByside {
+
+        padding-left: 4%;
+        padding-right: 4%;
+
+        gap: 25px;
+    }
+
+    .service_left,
+    .service_right {
+
+        width: 50%;
+    }
+
+    .service_image {
+
+        width: 100%;
+    }
+
+    .h_3 {
+
+        font-size: 22px;
+    }
+
+    .p_2 {
+
+        font-size: 16px;
+    }
+
+
+    /* CONTACT */
+
+    .contact_section {
+
+        gap: 40px;
+    }
+
+
+    /* FOOTER */
+
+    .footer_container {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/*   MOBILE*/
+
+@media (max-width: 768px) {
+
+
+    /* NAVBAR */
+
+    .navbar {
+
+        position: relative;
+
+        padding: 15px;
+    }
+
+    .nav_1 {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        justify-content: center;
+    }
+
+    .mn_pic {
+
+        margin: 0 auto 10px;
+    }
+
+    .mn_pic img {
+
+        width: 130px;
+    }
+
+
+    /* SLIDER */
+
+    #img_container {
+
+        height: 350px;
+    }
+
+    .slide_image {
+
+        height: 350px;
+    }
+
+    .sliderImg {
+
+        height: 350px;
+    }
+
+
+    /* HEADINGS */
+
+    #page_1,
+    #page_2,
+    #chose_h,
+    #Process_h,
+    #hea_1 {
+
+        font-size: 42px;
+
+        margin: 45px 0 30px;
+    }
+
+
+    /* ABOUT */
+
+    .div_x {
+
+        padding: 40px 15px;
+    }
+
+    .container_3 {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .div_1 {
+
+        width: 90%;
+
+        max-width: 400px;
+    }
+
+    .about_image {
+
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       SERVICES MOBILE
+    ===================================================== */
+
+    .sideByside {
+
+        flex-direction: column;
+
+        padding: 20px 15px 60px;
+
+        gap: 30px;
+    }
+
+    .service_left,
+    .service_right {
+
+        width: 100%;
+    }
+
+    .service_left {
+
+        order: 1;
+    }
+
+    .service_right {
+
+        order: 2;
+
+        gap: 18px;
+    }
+
+    .service_image {
+
+        width: 100%;
+
+        max-width: 600px;
+
+        margin: auto;
+    }
+
+    .solotion {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 18px;
+    }
+
+    .service_icon {
+
+        width: 50px;
+
+        min-width: 50px;
+
+        height: 50px;
+
+        font-size: 22px;
+    }
+
+    .h_3 {
+
+        font-size: 23px;
+    }
+
+    .p_2 {
+
+        font-size: 16px;
+    }
+
+
+    /* WHY CHOOSE US */
+
+    .page_3 {
+
+        padding: 30px 15px 60px;
+    }
+
+    .chose_1 {
+
+        width: 100%;
+
+        margin-bottom: 40px;
+    }
+
+    .rwCon {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .divfst,
+    .div_2 {
+
+        width: 92%;
+
+        max-width: 400px;
+    }
+
+
+    /* PROCESS */
+
+    .process_img {
+
+        width: 100%;
+
+        margin-bottom: 40px;
+    }
+
+
+    /* INDUSTRIES */
+
+    .page_4 {
+
+        padding: 30px 15px 50px;
+    }
+
+    .img_div {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 35px;
+    }
+
+    .industry_box {
+
+        width: 100%;
+    }
+
+    .circle_img {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    /* CONTACT */
+
+    .contact_section {
+
+        flex-direction: column;
+
+        padding: 50px 15px;
+
+        gap: 40px;
+    }
+
+    .contact_us {
+
+        width: 100%;
+
+        max-width: 600px;
+    }
+
+    .contact_form {
+
+        width: 100%;
+
+        max-width: 600px;
+    }
+
+    #page_5 {
+
+        font-size: 42px;
+    }
+
+
+    /* FOOTER */
+
+    .footer_container {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 50px 25px 30px;
+    }
+
+    .get_head {
+
+        font-size: 45px;
+    }
+
+    .apps_icons {
+
+        margin-top: 10px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    /* NAV */
+
+    .navbar {
+
+        padding: 12px 10px;
+    }
+
+    .nav_1 {
+
+        gap: 10px;
+    }
+
+    .nav_1 a {
+
+        font-size: 15px;
+    }
+
+    .mn_pic img {
+
+        width: 110px;
+    }
+
+
+    /* SLIDER */
+
+    #img_container {
+
+        height: 230px;
+    }
+
+    .slide_image {
+
+        height: 230px;
+    }
+
+    .sliderImg {
+
+        height: 230px;
+    }
+
+
+    /* HEADINGS */
+
+    #page_1,
+    #page_2,
+    #chose_h,
+    #Process_h,
+    #hea_1 {
+
+        font-size: 32px;
+
+        margin: 35px 0 25px;
+    }
+
+
+    /* ABOUT */
+
+    .div_1 {
+
+        width: 95%;
+
+        padding: 18px;
+    }
+
+    .h_2 {
+
+        font-size: 21px;
+    }
+
+    .p_1 {
+
+        font-size: 16px;
+    }
+
+
+    /* SERVICES */
+
+    .sideByside {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+    .solotion {
+
+        padding: 15px;
+
+        gap: 12px;
+    }
+
+    .service_icon {
+
+        width: 45px;
+
+        min-width: 45px;
+
+        height: 45px;
+
+        font-size: 19px;
+    }
+
+    .h_3 {
+
+        font-size: 20px;
+
+        margin-top: 2px;
+    }
+
+    .p_2 {
+
+        font-size: 15px;
+    }
+
+
+    /* WHY CHOOSE */
+
+    .divfst,
+    .div_2 {
+
+        width: 96%;
+
+        padding: 18px;
+    }
+
+    .h_4 {
+
+        font-size: 22px;
+    }
+
+    .p_3 {
+
+        font-size: 16px;
+    }
+
+
+    /* INDUSTRIES */
+
+    .circle_img {
+
+        width: 180px;
+
+        height: 180px;
+    }
+
+    .industry_box h2 {
+
+        font-size: 21px;
+    }
+
+
+    /* CONTACT */
+
+    #page_5 {
+
+        font-size: 34px;
+    }
+
+    .page-5 {
+
+        font-size: 16px;
+    }
+
+    .input_1 {
+
+        height: 55px;
+
+        font-size: 16px;
+    }
+
+    .input_2 {
+
+        height: 100px;
+
+        font-size: 16px;
+    }
+
+    .sub_btn {
+
+        width: 130px;
+
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+
+    /* FOOTER */
+
+    .footer_container {
+
+        padding: 40px 20px 25px;
+    }
+
+    .get_head {
+
+        font-size: 38px;
+    }
+
+    .footer_container h2 {
+
+        font-size: 22px;
+    }
+
+    .footer_container p {
+
+        font-size: 15px;
+    }
+
+    .facebook_logo,
+    .apps_logo {
+
+        font-size: 35px;
+    }
+
+    .last_pera {
+
+        font-size: 12px !important;
+    }
+}
